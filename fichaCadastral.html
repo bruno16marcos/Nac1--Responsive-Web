@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Ficha Cadastral</title>
+    <style type="text/css">
+    .cabecalho {
+			height: 50px;
+      color: darkgray;
+      text-align: center;
+      font-size: 15px;
+		}
+
+    body {
+    text-align: center;
+    }
+
+    form {
+    display: inline-flex;
+    border-color: #333;
+    text-align: left;
+    }
+
+    input {
+      background-color: #ddd;
+      color: 000;
+      margin: 7px 0;
+      vertical-align: left;
+    }
+
+    .button {
+      align-content: center;
+    }
+
+    select {
+    width: 18%;
+    background-color: #ddd;
+    }
+
+    </style>
+  </head>
+  <body>
+    <div class="cabecalho">
+    <h1>Ficha Cadastral</h1>
+  </div>
+    <form method="post" action="cadastar.html">
+    <fieldset>
+      <legend>Dados Pessoais</legend>
+    <div>
+      <label for="nome">Nome:
+        <br>
+        <input type="text" id="nome" name"nome" size="60" required/></label>
+    </div>
+    <div>
+      <label for="rg">RG:
+        <input type="number" id="rg" name"rg" size="9" required/></label>
+      <label for="cpf">CPF:
+        <input type="number" id="cpf" name"cpf" size="12" required /></label>
+    </div>
+      <div>
+          <label for="endereco">Endereço: <br>
+              <input type="text" id="endereço" name"endereço" size="60" required/></label>
+    </div>
+    <div>
+      <label for="genero">Gênero:</label>
+          <select name="list" form="generolist">
+              <option value="feminino">Feminino</option>
+              <option value="masculino">Masculino</option>
+              <option value="outros">Outros</option>
+          </select>
+          <label for="dataNascimento">Data de Nascimento: </label>
+              <input type="date" id="dataNascimento" name="dataNascimento" required>
+    </div>
+    <div>
+      <label for="civil">Situação Civil: <br>
+        <input type="radio" id="solteiro" name"solteiro"/> Solteira(o) <input type="radio" id="casado" name"casado"/> Casada(o)  
+        <input type="radio" id="viuvo" name"viuvo"/> Viúva(o)</label>
+    </div>
+    <div style="text-align:center;">
+      <button>Cadastrar</button>
+    </div>
+    </fieldset>
+    </form>
+  </body>
+</html>
